@@ -1,0 +1,8 @@
+---
+- name: update bundles
+  command: "{{ca_update_command}}"
+- name: restart sssd
+  service:
+    name: sssd
+    state: restarted
+...

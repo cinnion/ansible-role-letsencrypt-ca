@@ -11,6 +11,13 @@
     group: root
     mode: 0644
   notify:
-    - update bundles
     - restart sssd
-...
+
+- name: update bundles
+  command: "{{ca_update_command}}"
+
+- name: HACK - Copy extracted bundles from resune
+  copy:
+    src:  /etc/pki/ca-trust/extracted/
+    dest: /etc/pki/ca-trust/extracted/
+    force: true

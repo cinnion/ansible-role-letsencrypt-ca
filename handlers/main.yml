@@ -1,8 +1,10 @@
 ---
-- name: update bundles
+- name: Update CA trust bundles
   command: "{{ca_update_command}}"
+
 - name: restart sssd
   service:
     name: sssd
     state: restarted
-...
+  when:
+    - inventory_hostname in groups['ldap_clients']

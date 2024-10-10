@@ -9,8 +9,8 @@ role.
 
 ## Requirements
 
-This role has been developed using Ansible 2.6, and presently only works with
-RHEL/CentOS 6.x and 7.x.
+This role has been developed using Ansible 2.9, and presently only works with
+RHEL/CentOS/Rocky 6.x through 9.x.
 
 It requires downloading the CA certificates for Let's Encrypt from their
 [Chain of Trust](https://letsencrypt.org/certificates/) page and placing them
